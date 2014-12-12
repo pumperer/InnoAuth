@@ -108,49 +108,49 @@ static NSArray* permissions = nil;
     }];
 }
 
-- (void) testRequest {
-    [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error && result) {
-            NSDictionary<FBGraphUser>* dic = result;
-            NSString* firstName = [[NSString alloc] initWithString:dic.first_name];
-            NSString* userID = dic.objectID;
-            NSString* logStr = [[NSString alloc] initWithFormat:@"requestForMe result\nUser ID : %@\nName : %@", userID, firstName];
-            [self showMessage:logStr withTitle:@"ALERT!"];
-        }
-    }];
-}
-
-- (void) testRequest2 {
-    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error && result) {
-            NSArray* fetchedFriendData = [[NSArray alloc] initWithArray:[result objectForKey:@"data"]];
-            NSLog(@"My Friends count is %d", (unsigned int)fetchedFriendData.count);
-            for (int i = 0; i < fetchedFriendData.count; i++) {
-                NSDictionary* friendData = [fetchedFriendData objectAtIndex:i];
-                NSString* friendID = [friendData objectForKey:@"id"];
-                NSString* friendName = [friendData objectForKey:@"first_name"];
-                NSLog(@"index %i : ID[%@] Name[%@]", i, friendID, friendName);
-            }
-        }
-    }];
-}
-
-- (void) testRequest3 {
-    [FBRequestConnection startWithGraphPath:@"/me/invitable_friends?locale=ko_KR" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error && result) {
-            NSArray* fetchedFriendData = [[NSArray alloc] initWithArray:[result objectForKey:@"data"]];
-            NSLog(@"My Invitable Friends count is %d", (unsigned int)fetchedFriendData.count);
-            for (int i = 0; i < fetchedFriendData.count; i++) {
-                NSDictionary* friendData = [fetchedFriendData objectAtIndex:i];
-                NSString* friendID = [friendData objectForKey:@"id"];
-                NSString* friendName = [friendData objectForKey:@"first_name"];
-                NSLog(@"index %i : ID[%@] Name[%@]", i, friendID, friendName);
-            }
-        } else {
-            [self showMessage:[error description] withTitle:@"ALERT!"];
-        }
-    }];
-}
+//- (void) testRequest {
+//    [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+//        if (!error && result) {
+//            NSDictionary<FBGraphUser>* dic = result;
+//            NSString* firstName = [[NSString alloc] initWithString:dic.first_name];
+//            NSString* userID = dic.objectID;
+//            NSString* logStr = [[NSString alloc] initWithFormat:@"requestForMe result\nUser ID : %@\nName : %@", userID, firstName];
+//            [self showMessage:logStr withTitle:@"ALERT!"];
+//        }
+//    }];
+//}
+//
+//- (void) testRequest2 {
+//    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+//        if (!error && result) {
+//            NSArray* fetchedFriendData = [[NSArray alloc] initWithArray:[result objectForKey:@"data"]];
+//            NSLog(@"My Friends count is %d", (unsigned int)fetchedFriendData.count);
+//            for (int i = 0; i < fetchedFriendData.count; i++) {
+//                NSDictionary* friendData = [fetchedFriendData objectAtIndex:i];
+//                NSString* friendID = [friendData objectForKey:@"id"];
+//                NSString* friendName = [friendData objectForKey:@"first_name"];
+//                NSLog(@"index %i : ID[%@] Name[%@]", i, friendID, friendName);
+//            }
+//        }
+//    }];
+//}
+//
+//- (void) testRequest3 {
+//    [FBRequestConnection startWithGraphPath:@"/me/invitable_friends?locale=ko_KR" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+//        if (!error && result) {
+//            NSArray* fetchedFriendData = [[NSArray alloc] initWithArray:[result objectForKey:@"data"]];
+//            NSLog(@"My Invitable Friends count is %d", (unsigned int)fetchedFriendData.count);
+//            for (int i = 0; i < fetchedFriendData.count; i++) {
+//                NSDictionary* friendData = [fetchedFriendData objectAtIndex:i];
+//                NSString* friendID = [friendData objectForKey:@"id"];
+//                NSString* friendName = [friendData objectForKey:@"first_name"];
+//                NSLog(@"index %i : ID[%@] Name[%@]", i, friendID, friendName);
+//            }
+//        } else {
+//            [self showMessage:[error description] withTitle:@"ALERT!"];
+//        }
+//    }];
+//}
 
 - (void) shareWithLink:(NSString*)linkUrl title:(NSString*)title caption:(NSString*)caption desc:(NSString*)desc picture:(NSString*) picUrl {
     FBLinkShareParams* params = [[FBLinkShareParams alloc] init];
