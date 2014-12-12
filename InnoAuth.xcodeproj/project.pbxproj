@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14AB7B561A31B31300E73FE0 /* FacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB7B4F1A31B31300E73FE0 /* FacebookController.m */; };
+		14AB7B571A31B31300E73FE0 /* InnoAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB7B511A31B31300E73FE0 /* InnoAuth.m */; };
+		14AB7B581A31B31300E73FE0 /* InnoAuthBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14AB7B531A31B31300E73FE0 /* InnoAuthBridge.mm */; };
+		14AB7B5B1A31B35D00E73FE0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB7B5A1A31B35D00E73FE0 /* FacebookSDK.framework */; };
+		14AB7B5C1A31B38200E73FE0 /* InnoAuth.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14AB7B501A31B31300E73FE0 /* InnoAuth.h */; };
+		14AB7B5D1A31B38800E73FE0 /* InnoAuthBridge.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14AB7B521A31B31300E73FE0 /* InnoAuthBridge.h */; };
+		14AB7B5E1A31B38900E73FE0 /* InnoAuthType.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14AB7B541A31B31300E73FE0 /* InnoAuthType.h */; };
+		14AB7B5F1A31B38B00E73FE0 /* SocialController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14AB7B551A31B31300E73FE0 /* SocialController.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14AB7B321A31B2C800E73FE0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include;
+			dstSubfolderSpec = 16;
+			files = (
+				14AB7B5C1A31B38200E73FE0 /* InnoAuth.h in CopyFiles */,
+				14AB7B5D1A31B38800E73FE0 /* InnoAuthBridge.h in CopyFiles */,
+				14AB7B5E1A31B38900E73FE0 /* InnoAuthType.h in CopyFiles */,
+				14AB7B5F1A31B38B00E73FE0 /* SocialController.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14AB7B341A31B2C800E73FE0 /* libInnoAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInnoAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AB7B4E1A31B31300E73FE0 /* FacebookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookController.h; sourceTree = "<group>"; };
+		14AB7B4F1A31B31300E73FE0 /* FacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookController.m; sourceTree = "<group>"; };
+		14AB7B501A31B31300E73FE0 /* InnoAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnoAuth.h; sourceTree = "<group>"; };
+		14AB7B511A31B31300E73FE0 /* InnoAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InnoAuth.m; sourceTree = "<group>"; };
+		14AB7B521A31B31300E73FE0 /* InnoAuthBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnoAuthBridge.h; sourceTree = "<group>"; };
+		14AB7B531A31B31300E73FE0 /* InnoAuthBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = InnoAuthBridge.mm; sourceTree = "<group>"; };
+		14AB7B541A31B31300E73FE0 /* InnoAuthType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnoAuthType.h; sourceTree = "<group>"; };
+		14AB7B551A31B31300E73FE0 /* SocialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialController.h; sourceTree = "<group>"; };
+		14AB7B5A1A31B35D00E73FE0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Frameworks/FacebookSDK.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14AB7B311A31B2C800E73FE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB7B5B1A31B35D00E73FE0 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14AB7B2B1A31B2C800E73FE0 = {
+			isa = PBXGroup;
+			children = (
+				14AB7B361A31B2C800E73FE0 /* InnoAuth */,
+				14AB7B591A31B34F00E73FE0 /* Frameworks */,
+				14AB7B351A31B2C800E73FE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14AB7B351A31B2C800E73FE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14AB7B341A31B2C800E73FE0 /* libInnoAuth.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14AB7B361A31B2C800E73FE0 /* InnoAuth */ = {
+			isa = PBXGroup;
+			children = (
+				14AB7B4E1A31B31300E73FE0 /* FacebookController.h */,
+				14AB7B4F1A31B31300E73FE0 /* FacebookController.m */,
+				14AB7B501A31B31300E73FE0 /* InnoAuth.h */,
+				14AB7B511A31B31300E73FE0 /* InnoAuth.m */,
+				14AB7B521A31B31300E73FE0 /* InnoAuthBridge.h */,
+				14AB7B531A31B31300E73FE0 /* InnoAuthBridge.mm */,
+				14AB7B541A31B31300E73FE0 /* InnoAuthType.h */,
+				14AB7B551A31B31300E73FE0 /* SocialController.h */,
+			);
+			path = InnoAuth;
+			sourceTree = "<group>";
+		};
+		14AB7B591A31B34F00E73FE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14AB7B5A1A31B35D00E73FE0 /* FacebookSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14AB7B331A31B2C800E73FE0 /* InnoAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14AB7B481A31B2C800E73FE0 /* Build configuration list for PBXNativeTarget "InnoAuth" */;
+			buildPhases = (
+				14AB7B301A31B2C800E73FE0 /* Sources */,
+				14AB7B311A31B2C800E73FE0 /* Frameworks */,
+				14AB7B321A31B2C800E73FE0 /* CopyFiles */,
+				14AB7B601A31B38F00E73FE0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InnoAuth;
+			productName = InnoAuth;
+			productReference = 14AB7B341A31B2C800E73FE0 /* libInnoAuth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14AB7B2C1A31B2C800E73FE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Innospark;
+				TargetAttributes = {
+					14AB7B331A31B2C800E73FE0 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 14AB7B2F1A31B2C800E73FE0 /* Build configuration list for PBXProject "InnoAuth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 14AB7B2B1A31B2C800E73FE0;
+			productRefGroup = 14AB7B351A31B2C800E73FE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14AB7B331A31B2C800E73FE0 /* InnoAuth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14AB7B601A31B38F00E73FE0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "##########################################\n#\n# c.f. http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#\n# Version 2.7\n#\n# Latest Change:\n# - Supports iPhone 5 / iPod Touch 5 (uses Apple's workaround to lipo bug)\n#\n# Purpose:\n#   Automatically create a Universal static library for iPhone + iPad + iPhone Simulator from within XCode\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n\nset -e\nset -o pipefail\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -project \\\"${PROJECT_NAME}.xcodeproj\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\" BUILD_DIR=\\\"${BUILD_DIR}\\\" BUILD_ROOT=\\\"${BUILD_ROOT}\\\" SYMROOT=\\\"${SYMROOT}\\\"\n\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}.xcodeproj\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nxcrun -sdk iphoneos lipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\necho \"Fetching headers from ${PUBLIC_HEADERS_FOLDER_PATH}\"\necho \"  (if you embed your library project in another project, you will need to add\"\necho \"   a \\\"User Search Headers\\\" build setting of: (NB INCLUDE THE DOUBLE QUOTES BELOW!)\"\necho '        \"$(TARGET_BUILD_DIR)/usr/local/include/\"'\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}/include\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}/include\"\n# * needs to be outside the double quotes?\ncp -r \"${CURRENTCONFIG_DEVICE_DIR}/include/\"* \"${CREATING_UNIVERSAL_DIR}/include\"\n\ncp -r \"${CREATING_UNIVERSAL_DIR}/\"* \"${PRODUCT_TARGET_PATH}\"\n\nfi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14AB7B301A31B2C800E73FE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB7B581A31B31300E73FE0 /* InnoAuthBridge.mm in Sources */,
+				14AB7B561A31B31300E73FE0 /* FacebookController.m in Sources */,
+				14AB7B571A31B31300E73FE0 /* InnoAuth.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		14AB7B461A31B2C800E73FE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		14AB7B471A31B2C800E73FE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14AB7B491A31B2C800E73FE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_TARGET_PATH = /Users/hsshin/Documents/_InnoAuth;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		14AB7B4A1A31B2C800E73FE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_TARGET_PATH = /Users/hsshin/Documents/_InnoAuth;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14AB7B2F1A31B2C800E73FE0 /* Build configuration list for PBXProject "InnoAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AB7B461A31B2C800E73FE0 /* Debug */,
+				14AB7B471A31B2C800E73FE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14AB7B481A31B2C800E73FE0 /* Build configuration list for PBXNativeTarget "InnoAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AB7B491A31B2C800E73FE0 /* Debug */,
+				14AB7B4A1A31B2C800E73FE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14AB7B2C1A31B2C800E73FE0 /* Project object */;
+}
