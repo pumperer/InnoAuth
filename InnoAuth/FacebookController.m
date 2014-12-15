@@ -36,16 +36,23 @@ static NSArray* permissions = nil;
 }
 
 - (void) Login {
-    [FBSession openActiveSessionWithReadPermissions:permissions
-                                       allowLoginUI:YES
-                                  completionHandler:
-     ^(FBSession *session, FBSessionState state, NSError *error) {
-         
-         // Retrieve the app delegate
-         //AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-         // Call the app delegate's sessionStateChanged:state:error method to handle session state changes
-         [self sessionStateChanged:session state:state error:error];
-     }];
+    fbSession = [[FBSession alloc] initWithPermissions:permissions];
+    [fbSession openWithBehavior:FBSessionLoginBehaviorForcingWebView completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+        // Retrieve the app delegate
+        //AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        // Call the app delegate's sessionStateChanged:state:error method to handle session state changes
+        [self sessionStateChanged:session state:status error:error];
+    }];
+    
+//    [FBSession openActiveSessionWithReadPermissions:permissions
+//                                       allowLoginUI:YES
+//                                  completionHandler:
+//     ^(FBSession *session, FBSessionState state, NSError *error) {
+//         // Retrieve the app delegate
+//         //AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+//         // Call the app delegate's sessionStateChanged:state:error method to handle session state changes
+//         [self sessionStateChanged:session state:state error:error];
+//     }];
 }
 
 - (void) Logout {
@@ -153,32 +160,34 @@ static NSArray* permissions = nil;
 //}
 
 - (void) shareWithLink:(NSString*)linkUrl title:(NSString*)title caption:(NSString*)caption desc:(NSString*)desc picture:(NSString*) picUrl {
-    FBLinkShareParams* params = [[FBLinkShareParams alloc] init];
-    if (linkUrl != nil) {
-        params.link = [NSURL URLWithString:linkUrl];
-    }
-    if (title != nil) {
-        params.name = title;
-    }
-    if (caption != nil) {
-        params.caption = caption;
-    }
-    if (desc != nil) {
-        params.linkDescription = desc;
-    }
-    if (picUrl != nil) {
-        params.picture = [NSURL URLWithString:picUrl];
-    }
+//    FBLinkShareParams* params = [[FBLinkShareParams alloc] init];
+//    if (linkUrl != nil) {
+//        params.link = [NSURL URLWithString:linkUrl];
+//    }
+//    if (title != nil) {
+//        params.name = title;
+//    }
+//    if (caption != nil) {
+//        params.caption = caption;
+//    }
+//    if (desc != nil) {
+//        params.linkDescription = desc;
+//    }
+//    if (picUrl != nil) {
+//        params.picture = [NSURL URLWithString:picUrl];
+//    }
     
-    if ([FBDialogs canPresentShareDialogWithParams:params]) {
-        [FBDialogs presentShareDialogWithLink:params.link handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
-            if (error) {
-                [self showMessage:[[NSString alloc] initWithFormat:@"Error publishing story : %@", error.description] withTitle:@"ERROR!"];
-            } else {
-                NSLog(@"Success publishing story : %@", results);
-            }
-        }];
-    } else {
+//    if ([FBDialogs canPresentShareDialogWithParams:params]) {
+//        [FBDialogs presentShareDialogWithLink:params.link handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+//            if (error) {
+//                [self showMessage:[[NSString alloc] initWithFormat:@"Error publishing story : %@", error.description] withTitle:@"ERROR!"];
+//            } else {
+//                NSLog(@"Success publishing story : %@", results);
+//            }
+//        }];
+//    }
+//    else
+    {
         NSMutableDictionary *testParams = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                            title == nil ? @"" : title, @"name",
                                            caption == nil ? @"" : caption, @"caption",
@@ -216,6 +225,7 @@ static NSArray* permissions = nil;
         NSLog(@"Session opened");
         // Show the user the logged-in UI
         fbSession = session;
+        [FBSession setActiveSession:fbSession];
         [self userLoggedIn];
         return;
     }
