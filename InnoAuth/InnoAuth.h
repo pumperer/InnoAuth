@@ -24,5 +24,6 @@
 - (void) socialFriendsUseThisApp:(InnoAuthType)type completeBlock:(InnoStringCallback)callback;
 - (void) socialAccounts:(InnoAuthType)type completeBlock:(InnoStringCallback)callback;
 - (void) socialShare:(InnoAuthType)type link:(NSString*)linkUrl title:(NSString*)title caption:(NSString*)caption desc:(NSString*)desc picture:(NSString*)picUrl completeBlock:(InnoStringCallback)callback;
+- (void) socialFeed:(InnoAuthType)type link:(NSString*)linkUrl title:(NSString*)title caption:(NSString*)caption desc:(NSString*)desc picture:(NSString*)picUrl completeBlock:(InnoStringCallback)callback;
 
 @end

@@ -124,3 +124,9 @@ extern "C" void SocialShare(int type, const char* linkUrl, const char* title, co
                                  }
                              }];
 }
+
+extern "C" void SocialFeed(int type, const char* linkUrl, const char* title, const char* caption, const char* desc, const char* picUrl, Common_handler handler)
+{
+    if (!CheckValidType(type, handler))
+        return;
+}

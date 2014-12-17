@@ -28,7 +28,7 @@ static NSArray* permissions = nil;
         fbSession = nil;
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            permissions = @[@"public_profile"];
+            permissions = @[@"public_profile", @"publish_actions"];
         });
     }
     
@@ -198,7 +198,7 @@ static NSArray* permissions = nil;
         
         [FBWebDialogs presentFeedDialogModallyWithSession:nil parameters:testParams handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error) {
             if (error) {
-                [self showMessage:[[NSString alloc] initWithFormat:@"Error publishing story : %@", error.description] withTitle:@"ERROR!"];
+                [self showMessage:[[NSString alloc] initWithFormat:@"Error from share : %@", error.description] withTitle:@"ERROR!"];
             } else {
                 if (result == FBWebDialogResultDialogNotCompleted) {
                     NSLog(@"User cancelled. - 1");
@@ -208,7 +208,7 @@ static NSArray* permissions = nil;
                     if (![urlParams valueForKey:@"post_id"]) {
                         NSLog(@"User cancelled. - 2");
                     } else {
-                        NSString* logStr = [NSString stringWithFormat: @"Posted story, id: %@", [urlParams valueForKey:@"post_id"]];
+                        NSString* logStr = [NSString stringWithFormat: @"Share OK, id: %@", [urlParams valueForKey:@"post_id"]];
                         NSLog(@"Result : %@", logStr);
                     }
                 }
@@ -216,6 +216,25 @@ static NSArray* permissions = nil;
         }];
     }
     
+}
+
+- (void) feedWithLink:(NSString*)linkUrl title:(NSString*)title caption:(NSString*)caption desc:(NSString*)desc picture:(NSString*)picUrl
+{
+    NSMutableDictionary *testParams = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       title == nil ? @"" : title, @"name",
+                                       caption == nil ? @"" : caption, @"caption",
+                                       desc == nil ? @"" : desc, @"description",
+                                       linkUrl == nil ? @"" : linkUrl, @"link",
+                                       picUrl == nil ? @"" : picUrl, @"picture",
+                                       nil];
+    
+    [FBRequestConnection startWithGraphPath:@"/me/feed" parameters:testParams HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (error) {
+            [self showMessage:[[NSString alloc] initWithFormat:@"Error from share : %@", error.description] withTitle:@"ERROR!"];
+        } else {
+            NSLog(@"Feed Result : %@", result);
+        }
+    }];
 }
 
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error

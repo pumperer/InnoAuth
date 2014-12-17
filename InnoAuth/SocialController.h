@@ -37,4 +37,6 @@
 
 - (void) shareWithLink:(NSString*)linkUrl title:(NSString*)title caption:(NSString*)caption desc:(NSString*)desc picture:(NSString*) picUrl;
 
+- (void) feedWithLink:(NSString*)linkUrl title:(NSString*)title caption:(NSString*)caption desc:(NSString*)desc picture:(NSString*)picUrl;
+
 @end
